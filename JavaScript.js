@@ -37,13 +37,35 @@ document.addEventListener("DOMContentLoaded", function() {
         var body = document.body;
         var h1 = document.querySelector("h1");
         var h2 = document.querySelector("h2");
+        var boxButtons = document.querySelectorAll(".box-button");
+        var boxContents = document.querySelectorAll(".box p"); // Select all paragraphs inside boxes
 
         if (lampImage.src.endsWith("bulb-off.png")) {
             lampImage.src = "https://i.postimg.cc/6QyTynzr/bulb-on.png";
             body.style.backgroundImage = "url('ImageDark.png')"; // Change background image to ImageDark.png
+            // Change box-button color to red
+            boxButtons.forEach(function(button) {
+                button.style.color = "red";
+            });
+            // Change text color to red
+            boxContents.forEach(function(content) {
+                content.style.color = "red";
+            });
+            // Change "Duality of Insanity" text color to red
+            h1.style.color = "red";
         } else {
             lampImage.src = "https://i.postimg.cc/KjK1wL3c/bulb-off.png";
             body.style.backgroundImage = "url('ImageLight.png')"; // Change background image to ImageLight.png
+            // Revert box-button color to white
+            boxButtons.forEach(function(button) {
+                button.style.color = "#fff";
+            });
+            // Revert text color to white
+            boxContents.forEach(function(content) {
+                content.style.color = "#fff";
+            });
+            // Revert "Duality of Insanity" text color to white
+            h1.style.color = "#fff";
         }
     }
 

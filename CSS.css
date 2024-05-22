@@ -1,6 +1,18 @@
 /* Global Styles */
-h1 {
-    color: #fff; /* Set the color to white */
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Add relative positioning */
+}
+.box-button {
+    margin: 10px; /* Add margin */
+}
+.box-button.absolute {
+    position: absolute; /* Position the button absolutely */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
 }
 
 body {
@@ -16,10 +28,17 @@ body {
 
 h1, h2 {
     color: rgb(255, 255, 255); 
+    font-family: Chiller, sans-serif; /* Add font family */
+    font-size: 10em; /* Increase font size */
+
+
 }
 
 h1, h2, h3 {
     margin: 10px 0;
+    font-family: Chiller, sans-serif; /* Add font family */
+    
+
 }
 
 img,
@@ -43,18 +62,6 @@ ul {
     padding-left: 20px;
 }
 
-a {
-    color: #00f;
-}
-
-cite {
-    font-style: normal;
-    font-weight: bold;
-}
-
-figcaption {
-    color: #888;
-}
 
 /* Box Styles */
 .container {
@@ -66,16 +73,19 @@ figcaption {
 }
 
 .box {
+    
     width: 90%;
     padding: 20px;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff00;
     margin: 10px auto;
+    font-family: Chiller, sans-serif; /* Add font family */
+    font-size: 2.5em; /* Increase font size */
     border-radius: 8px;
-    background-color: #333;
+    background-color: #33333300;
 }
 
 .box:nth-child(even) {
-    background-color: #555;
+    background-color: #00000000;
 }
 
 .left-align {
@@ -109,8 +119,9 @@ figcaption {
     border: none; /* Remove border */
     color: #fff; /* Set text color */
     cursor: pointer; /* Add cursor pointer */
+    font-family: Chiller, sans-serif; /* Add font family */
     transition: margin 0.3s ease; /* Add transition effect for margin change */
-    font-size: 1.2em; /* Increase font size */
+    font-size: 2.5em; /* Increase font size */
 }
 
 .box-button.absolute {
@@ -120,5 +131,5 @@ figcaption {
 }
 
 .box-button:hover {
-    color: #00f; /* Change text color on hover */
+    color: rgb(255, 0, 0); /* Change text color on hover */
 }
