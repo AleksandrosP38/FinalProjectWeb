@@ -4,18 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
     function toggleBoxContent(buttonId, contentId) {
         var button = document.getElementById(buttonId);
         var content = document.getElementById(contentId);
-        var originalText = button.textContent; // Store the original text of the button
+        var originalText = button.getAttribute("data-original-text"); // Store the original text of the button
 
         button.addEventListener("click", function() {
             if (content.style.display === "none") {
                 content.style.display = "block";
                 button.textContent = "X"; // Change button text to "X"
-                button.id = "hide-" + buttonId; // Change button id
                 button.classList.add("absolute"); // Add absolute positioning class
             } else {
                 content.style.display = "none";
                 button.textContent = originalText; // Revert button text to original
-                button.id = buttonId; // Revert button id
                 button.classList.remove("absolute"); // Remove absolute positioning class
             }
         });
@@ -70,5 +68,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.getElementById("lamp-image").addEventListener("click", toggleLamp);
-
 });

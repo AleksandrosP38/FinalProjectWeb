@@ -12,7 +12,7 @@
     <div class="container">
         <!-- Boxes -->
         <div class="box">
-            <button id="about-me-btn" class="box-button">Game</button>
+            <button id="about-me-btn" class="box-button" data-original-text="Game">Game</button>
             <button id="hide-about-me-btn" class="box-button absolute" style="display: none;">X</button>
             <div id="about-me-text" style="display: none;">
                 <br>
@@ -21,20 +21,20 @@
         </div>
         
         <div class="box">
-            <button id="personal-details-btn" class="box-button" data-original-text="Personal Details">About</button>
+            <button id="personal-details-btn" class="box-button" data-original-text="About">About</button>
             <div id="personal-details-text" style="display: none;">
                 <br>
                 <p>The game introduces a non-standard way of solving puzzles, in which you need to explore the bunker between two psychological states with different items and information. The game vision is innovative and more immersive not only for the genre but in general in current video games. The game is made to be played with a keyboard and mouse on PC.</p>
             </div>
         </div>
         <div class="box">
-            <button id="interests-btn" class="box-button" data-original-text="Interests">Community</button>
+            <button id="interests-btn" class="box-button" data-original-text="Community">Community</button>
             <div id="interests-text" style="display: none;">
                 <p>Join our vibrant community and engage with other members.</p>
             </div>
         </div>
         <div class="box">
-            <button id="final-note-btn" class="box-button" data-original-text="Final Note">News</button>
+            <button id="final-note-btn" class="box-button" data-original-text="News">News</button>
             <div id="final-note-text" style="display: none;">
                 <p>Stay updated with the latest news and announcements.</p>
             </div>
@@ -42,14 +42,14 @@
 
         <!-- Additional Boxes -->
         <div class="box">
-            <button id="box5-btn" class="box-button" data-original-text="Box 5">Patch Notes</button>
+            <button id="box5-btn" class="box-button" data-original-text="Patch Notes">Patch Notes</button>
             <div id="box5-text" style="display: none;">
                 <p>Check out the latest patch notes and updates for our products.</p>
             </div>
         </div>
 
         <div class="box">
-            <button id="box6-btn" class="box-button" data-original-text="Box 6">Requirments</button>
+            <button id="box6-btn" class="box-button" data-original-text="Requirments">Requirments</button>
             <div id="box6-text" style="display: none;">
                 <br>
                 <p>Requires a 64-bit processor and operating system
@@ -64,14 +64,14 @@
         </div>
 
         <div class="box">
-            <button id="box7-btn" class="box-button" data-original-text="Box 7">Support</button>
+            <button id="box7-btn" class="box-button" data-original-text="Support">Support</button>
             <div id="box7-text" style="display: none;">
                 <p>Need help? Get in touch with our support team for assistance.</p>
             </div>
         </div>
 
         <div class="box">
-            <button id="box8-btn" class="box-button" data-original-text="Box 8">Team</button>
+            <button id="box8-btn" class="box-button" data-original-text="Team">Team</button>
             <div id="box8-text" style="display: none;">
                 <p>Sabrina - Game Designer</p>
                 <p>Alexandre - Programmer</p>
@@ -88,9 +88,82 @@
     </div>
 
     <!-- Audio and Image -->
-    <audio controls src="BackgroundHorrorMusic.mp3">
-    </audio>
+    <audio controls src="BackgroundHorrorMusic.mp3"></audio>
+
     <!-- JavaScript -->
-    <script src="JavaScript.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // Function to toggle visibility of content for each box
+            function toggleBoxContent(buttonId, contentId) {
+                var button = document.getElementById(buttonId);
+                var content = document.getElementById(contentId);
+                var originalText = button.getAttribute("data-original-text"); // Store the original text of the button
+
+                button.addEventListener("click", function() {
+                    if (content.style.display === "none") {
+                        content.style.display = "block";
+                        button.textContent = "X"; // Change button text to "X"
+                        button.classList.add("absolute"); // Add absolute positioning class
+                    } else {
+                        content.style.display = "none";
+                        button.textContent = originalText; // Revert button text to original
+                        button.classList.remove("absolute"); // Remove absolute positioning class
+                    }
+                });
+            }
+
+            // Toggle visibility for each box
+            toggleBoxContent("about-me-btn", "about-me-text");
+            toggleBoxContent("personal-details-btn", "personal-details-text");
+            toggleBoxContent("interests-btn", "interests-text");
+            toggleBoxContent("final-note-btn", "final-note-text");
+            toggleBoxContent("box5-btn", "box5-text");
+            toggleBoxContent("box6-btn", "box6-text");
+            toggleBoxContent("box7-btn", "box7-text");
+            toggleBoxContent("box8-btn", "box8-text");
+
+            // Lamp toggling function
+            function toggleLamp() {
+                var lampImage = document.getElementById("lamp-image");
+                var body = document.body;
+                var h1 = document.querySelector("h1");
+                var h2 = document.querySelector("h2");
+                var boxButtons = document.querySelectorAll(".box-button");
+                var boxContents = document.querySelectorAll(".box p"); // Select all paragraphs inside boxes
+
+                if (lampImage.src.endsWith("bulb-off.png")) {
+                    lampImage.src = "https://i.postimg.cc/6QyTynzr/bulb-on.png";
+                    body.style.backgroundImage = "url('ImageDark.png')"; // Change background image to ImageDark.png
+                    // Change box-button color to red
+                    boxButtons.forEach(function(button) {
+                        button.style.color = "red";
+                    });
+                    // Change text color to red
+                    boxContents.forEach(function(content) {
+                        content.style.color = "red";
+                    });
+                    // Change "Duality of Insanity" text color to red
+                    h1.style.color = "red";
+                } else {
+                    lampImage.src = "https://i.postimg.cc/KjK1wL3c/bulb-off.png";
+                    body.style.backgroundImage = "url('ImageLight.png')"; // Change background image to ImageLight.png
+                    // Revert box-button color to white
+                    boxButtons.forEach(function(button) {
+                        button.style.color = "#fff";
+                    });
+                    // Revert text color to white
+                    boxContents.forEach(function(content) {
+                        content.style.color = "#fff";
+                    });
+                    // Revert "Duality of Insanity" text color to white
+                    h1.style.color = "#fff";
+                }
+            }
+
+            document.getElementById("lamp-image").addEventListener("click", toggleLamp);
+
+        });
+    </script>
 </body>
 </html>
