@@ -1,44 +1,29 @@
 /* Global Styles */
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative; /* Add relative positioning */
-}
-.box-button {
-    margin: 10px; /* Add margin */
-}
-.box-button.absolute {
-    position: absolute; /* Position the button absolutely */
-    top: 10px; /* Adjust top position */
-    right: 10px; /* Adjust right position */
+html, body {
+    height: 100%; /* Ensure the full height of the viewport is covered */
+    background-color: #000; /* Set a solid black background color */
+    margin: 0;
+    padding: 0;
 }
 
 body {
     color: #fff;
     text-align: center;
-    margin: 0;
-    padding: 0;
     background-image: url('ImageLight.png'); /* Change background image */
     background-repeat: no-repeat; /* Prevent background image from repeating */
     background-size: cover; /* Ensure the background image covers the entire viewport */
-    transition: background-color 0.5s ease; 
+    transition: background-color 0.5s ease;
 }
 
 h1, h2 {
-    color: rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
     font-family: Chiller, sans-serif; /* Add font family */
     font-size: 10em; /* Increase font size */
-
-
 }
 
 h1, h2, h3 {
     margin: 10px 0;
     font-family: Chiller, sans-serif; /* Add font family */
-    
-
 }
 
 img,
@@ -62,7 +47,6 @@ ul {
     padding-left: 20px;
 }
 
-
 /* Box Styles */
 .container {
     display: flex;
@@ -73,7 +57,6 @@ ul {
 }
 
 .box {
-    
     width: 90%;
     padding: 20px;
     border: 2px solid #ffffff00;
@@ -82,6 +65,7 @@ ul {
     font-size: 2.5em; /* Increase font size */
     border-radius: 8px;
     background-color: #33333300;
+    position: relative; /* Ensure the close button is positioned relative to the box */
 }
 
 .box:nth-child(even) {
@@ -109,7 +93,7 @@ ul {
 #lamp-image {
     max-width: 50px;
     margin-bottom: 5px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 /* Button Styles */
