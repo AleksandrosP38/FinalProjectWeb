@@ -49,7 +49,7 @@
         </div>
 
         <div class="box">
-            <button id="box6-btn" class="box-button" data-original-text="Box 6">Requirments</button>
+            <button id="box6-btn" class="box-button" data-original-text="Box 6">Requirements</button>
             <div id="box6-text" style="display: none;">
                 <br>
                 <p>Requires a 64-bit processor and operating system
@@ -92,5 +92,61 @@
     </audio>
     <!-- JavaScript -->
     <script src="JavaScript.js"></script>
+
+    <div class="container">
+        <div class="game-container">
+            <h2>Tic Tac Toe</h2>
+            <div class="tic-tac-toe">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+        <div class="game-container">
+            <h2>Guessing Game</h2>
+            <p id="instructions">Guess a number between 1 and 100:</p>
+            <input type="number" id="guess-input">
+            <button id="submit-guess-btn">Submit</button>
+            <p id="feedback"></p>
+            <button id="reset-guess-btn">Reset</button>
+        </div>
+
+        <div class="game-container">
+            <h2>Wordle</h2>
+            <div id="wordle-grid">
+                <!-- 6 rows of 5 cells for Wordle -->
+                <div class="wordle-row wordle-row-0">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="wordle-row wordle-row-1">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="wordle-row wordle-row-2">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="wordle-row wordle-row-3">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="wordle-row wordle-row-4">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="wordle-row wordle-row-5">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+            <input type="text" id="wordle-input" maxlength="5">
+            <button id="submit-wordle-btn">Submit</button>
+            <p id="wordle-feedback"></p>
+            <button id="reset-wordle-btn">Reset</button>
+        </div>
+    </div>
 </body>
 </html>

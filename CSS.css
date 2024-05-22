@@ -117,3 +117,122 @@ ul {
 .box-button:hover {
     color: rgb(255, 0, 0); /* Change text color on hover */
 }
+
+/* Games Container Styles */
+.game-container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+/* Tic Tac Toe styles */
+.tic-tac-toe-container {
+    margin: 20px;
+}
+
+.tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
+.cell {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+}
+
+#reset-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.5em; /* Increased font size */
+    cursor: pointer;
+}
+
+/* Guess the Number styles */
+.guess-the-number-container {
+    margin: 20px;
+}
+
+#guess-input {
+    font-size: 1.5em; /* Increased font size */
+    padding: 5px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+#submit-guess-btn, #reset-guess-btn {
+    font-size: 1.5em; /* Increased font size */
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-size: 1.5em; /* Increased font size */
+}
+
+/* Wordle styles */
+.wordle-container {
+    margin: 20px;
+    
+}
+
+#wordle-grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.wordle-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+.wordle-grid div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #fff;
+    font-size: 2em; /* Increased font size */
+    height: 50px;
+    width: 50px;
+    border: 2px solid #fff;
+}
+
+.wordle-row div {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+#wordle-input {
+    font-size: 1.5em; /* Increased font size */
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#submit-wordle-btn, #reset-wordle-btn {
+    font-size: 1.5em; /* Increased font size */
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#wordle-feedback {
+    margin-top: 10px;
+    font-size: 1.5em; /* Increased font size */
+}
