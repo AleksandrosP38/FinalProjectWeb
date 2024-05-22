@@ -236,3 +236,18 @@ ul {
     margin-top: 10px;
     font-size: 1.5em; /* Increased font size */
 }
+
+.informative-box {
+    background-color: #000000;
+    font-size: 0.5em;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Use all available space */
+    margin-right: 20px;
+}
+
+
+.informative-box h2 {
+    margin-bottom: 10px;
+}
