@@ -4,17 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
     function toggleBoxContent(buttonId, contentId) {
         var button = document.getElementById(buttonId);
         var content = document.getElementById(contentId);
-        var originalText = button.textContent; // Store the original text of the button
+        var originalText = button.textContent; 
 
         button.addEventListener("click", function() {
             if (content.style.display === "none") {
                 content.style.display = "block";
-                button.textContent = "X"; // Change button text to "X"
-                button.classList.add("absolute"); // Add absolute positioning class
+                button.textContent = "X"; 
+                button.classList.add("absolute"); 
             } else {
                 content.style.display = "none";
-                button.textContent = originalText; // Revert button text to original
-                button.classList.remove("absolute"); // Remove absolute positioning class
+                button.textContent = originalText; 
+                button.classList.remove("absolute"); 
             }
         });
     }
@@ -36,12 +36,11 @@ document.addEventListener("DOMContentLoaded", function() {
         var h1 = document.querySelector("h1");
         var h2 = document.querySelector("h2");
         var boxButtons = document.querySelectorAll(".box-button");
-        var boxContents = document.querySelectorAll(".box p"); // Select all paragraphs inside boxes
+        var boxContents = document.querySelectorAll(".box p"); 
 
         if (lampImage.src.endsWith("bulb-off.png")) {
             lampImage.src = "https://i.postimg.cc/6QyTynzr/bulb-on.png";
-            body.style.backgroundImage = "url('ImageDark.png')"; // Change background image to ImageDark.png
-            // Change box-button color to red
+            body.style.backgroundImage = "url('ImageDark.png')"; 
             boxButtons.forEach(function(button) {
                 button.style.color = "red";
             });
@@ -53,8 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
             h1.style.color = "red";
         } else {
             lampImage.src = "https://i.postimg.cc/KjK1wL3c/bulb-off.png";
-            body.style.backgroundImage = "url('ImageLight.png')"; // Change background image to ImageLight.png
-            // Revert box-button color to white
+            body.style.backgroundImage = "url('ImageLight.png')"; 
             boxButtons.forEach(function(button) {
                 button.style.color = "#fff";
             });
@@ -101,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        currentPlayer = "O"; // Switch to AI
-        setTimeout(makeAIMove, 500); // AI makes a move after a short delay
+        currentPlayer = "O"; 
+        setTimeout(makeAIMove, 500); 
     }
 
     function makeAIMove() {
@@ -118,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        currentPlayer = "X"; // Switch back to player
+        currentPlayer = "X"; 
     }
 
     function checkWinner() {
