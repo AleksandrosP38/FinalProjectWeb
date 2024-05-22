@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Meu Primeiro Site</title>
+    <link rel="stylesheet" href="CSS.css"> 
+    <style>
+        /* Additional CSS */
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* Add relative positioning */
+        }
+        .box-button {
+            margin: 10px; /* Add margin */
+        }
+        .box-button.absolute {
+            position: absolute; /* Position the button absolutely */
+            top: 10px; /* Adjust top position */
+            right: 10px; /* Adjust right position */
+        }
+    </style>
+</head>
+<body>
+    <h1>DUALITY OF INSANITY</h1>
+
+    <div class="container">
+        <!-- Boxes -->
+        <div class="box">
+            <button id="about-me-btn" class="box-button">Game</button>
+            <button id="hide-about-me-btn" class="box-button absolute" style="display: none;">X</button>
+            <div id="about-me-text" style="display: none;">
+                <p>The game takes place in a bunker, in first person. The character is trapped in this location for initially unknown reasons and for an undetermined amount of time, but enough to sometimes drive him crazy. Your objective is to escape this bunker without reaching total insanity, using the items and information at your disposal that vary according to the character's two psychological states: normal state and state of madness.</p>
+            </div>
+        </div>
+        
+        <div class="box">
+            <button id="personal-details-btn" class="box-button" data-original-text="Personal Details">About</button>
+            <div id="personal-details-text" style="display: none;">
+                <p>The game introduces a non-standard way of solving puzzles, in which you need to explore the bunker between two psychological states with different items and information. The game vision is innovative and more immersive not only for the genre but in general in current video games. The game is made to be played with a keyboard and mouse on PC.</p>
+            </div>
+        </div>
+        <div class="box">
+            <button id="interests-btn" class="box-button" data-original-text="Interests">Community</button>
+            <div id="interests-text" style="display: none;">
+                <p>Join our vibrant community and engage with other members.</p>
+            </div>
+        </div>
+        <div class="box">
+            <button id="final-note-btn" class="box-button" data-original-text="Final Note">News</button>
+            <div id="final-note-text" style="display: none;">
+                <p>Stay updated with the latest news and announcements.</p>
+            </div>
+        </div>
+
+        <!-- Additional Boxes -->
+        <div class="box">
+            <button id="box5-btn" class="box-button" data-original-text="Box 5">Patch Notes</button>
+            <div id="box5-text" style="display: none;">
+                <p>Check out the latest patch notes and updates for our products.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <button id="box6-btn" class="box-button" data-original-text="Box 6">Requirments</button>
+            <div id="box6-text" style="display: none;">
+                <p>Requires a 64-bit processor and operating system
+                    OS *: Windows® 7 / Windows® 8.1 / Windows® 10 64-bit (latest Service Pack)
+                    Processor: Processor Intel® Core™ i5 2400 3.4 GHz or i5 7400 3.5 GHz / AMD Ryzen R5 1600X 3.6 GHz
+                    Memory: 8 GB RAM
+                    Graphics: NVIDIA® GeForce® GTX 970 4GB or GTX 1060 6GB / AMD R9 390 8GB Memory 8 GB RAM
+                    Network: Broadband Internet connection
+                    Storage: 105 GB available space
+                    Additional Notes: Beginning on June 4, 2024, Destiny 2 is ending support for Windows 7, Windows 8, and Windows 8.1 operating systems.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <button id="box7-btn" class="box-button" data-original-text="Box 7">Support</button>
+            <div id="box7-text" style="display: none;">
+                <p>Need help? Get in touch with our support team for assistance.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <button id="box8-btn" class="box-button" data-original-text="Box 8">Team</button>
+            <div id="box8-text" style="display: none;">
+                <p>Sabrina - Game Designer</p>
+                <p>Alexandre - Programmer</p>
+                <p>Kevin - Programmer</p>
+                <p>Ana R - Artist</p>
+                <p>Ana C - 3D Artist</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lamp -->
+    <div id="lamp-container">
+        <img id="lamp-image" src="https://i.postimg.cc/KjK1wL3c/bulb-off.png" alt="Lamp">
+    </div>
+
+    <!-- Audio and Image -->
+    <audio controls src="Escape Beautiful Chill Music Mix.mp3">
+        <p>Listen to my favorite chill music mix: <cite>Escape Beautiful Chill Music Mix</cite></p>
+    </audio>
+    <!-- JavaScript -->
+    <script src="JavaScript.js"></script>
+</body>
+</html>

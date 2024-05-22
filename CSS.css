@@ -1,0 +1,118 @@
+/* Global Styles */
+body {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black; 
+    transition: background-color 0.5s ease; 
+}
+
+h1, h2 {
+    color: rgb(255, 255, 255); 
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+img,
+audio {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    color: #fff;
+    text-align: left;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+a {
+    color: #00f;
+}
+
+cite {
+    font-style: normal;
+    font-weight: bold;
+}
+
+figcaption {
+    color: #888;
+}
+
+/* Box Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure full height of the viewport */
+}
+
+.box {
+    width: 90%;
+    padding: 20px;
+    border: 2px solid #fff;
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.box:nth-child(even) {
+    background-color: #555;
+}
+
+.left-align {
+    text-align: left;
+}
+
+/* Media Query for Mobile */
+@media only screen and (min-width: 600px) {
+    .box {
+        width: 45%;
+    }
+}
+
+/* Additional styles for lamp */
+#lamp-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#lamp-image {
+    max-width: 50px;
+    margin-bottom: 5px;
+    cursor: pointer; 
+}
+
+/* Button Styles */
+.box-button {
+    margin: 10px; /* Add margin */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: #fff; /* Set text color */
+    cursor: pointer; /* Add cursor pointer */
+    transition: margin 0.3s ease; /* Add transition effect for margin change */
+    font-size: 1.2em; /* Increase font size */
+}
+
+.box-button.absolute {
+    position: absolute; /* Position the button absolutely */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+}
+
+.box-button:hover {
+    color: #00f; /* Change text color on hover */
+}
