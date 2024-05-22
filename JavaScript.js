@@ -40,14 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (lampImage.src.endsWith("bulb-off.png")) {
             lampImage.src = "https://i.postimg.cc/6QyTynzr/bulb-on.png";
-            body.style.backgroundColor = "yellow";
-            h1.style.color = "black"; 
-            h2.style.color = "black"; 
+            body.style.backgroundImage = "url('ImageDark.png')"; // Change background image to ImageDark.png
         } else {
             lampImage.src = "https://i.postimg.cc/KjK1wL3c/bulb-off.png";
-            body.style.backgroundColor = "black";
-            h1.style.color = "#fff"; 
-            h2.style.color = "#fff"; 
+            body.style.backgroundImage = "url('ImageLight.png')"; // Change background image to ImageLight.png
         }
     }
 
