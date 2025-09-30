@@ -17,13 +17,13 @@ body {
 
 h1, h2 {
     color: rgb(255, 255, 255);
-    font-family: Chiller, sans-serif; 
+font-family: 'Creepster', cursive;
     font-size: 10em; 
 }
 
 h1, h2, h3 {
     margin: 10px 0;
-    font-family: Chiller, sans-serif; 
+font-family: 'Creepster', cursive;
 }
 
 img,
@@ -61,7 +61,7 @@ ul {
     padding: 20px;
     border: 2px solid #ffffff00;
     margin: 10px auto;
-    font-family: Chiller, sans-serif; 
+font-family: 'Creepster', cursive;
     font-size: 2.5em; 
     border-radius: 8px;
     background-color: #33333300;
@@ -103,7 +103,7 @@ ul {
     border: none; 
     color: #fff; 
     cursor: pointer; 
-    font-family: Chiller, sans-serif; 
+font-family: 'Creepster', cursive;
     transition: margin 0.3s ease; 
     font-size: 2.5em; 
 }
